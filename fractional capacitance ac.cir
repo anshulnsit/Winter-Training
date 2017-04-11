@@ -1,0 +1,15 @@
+** Fractional Capacitance Simulation - Winter Training Order = 1.5
+.lib eval.lib
+Ra 1 2 111.1
+Rb 2 3 251.7
+Rc 3 4 378.7
+Rd 4 5 888.9
+Re 5 0 7.369k
+Cb 2 3 83.8nF
+Cc 3 4 0.296uF
+Cd 4 5 0.537uF
+Ce 5 0 0.695uF
+Vin 1 0 ac 1V
+.ac dec 50 1Hz 1MegHz
+.probe
+.end

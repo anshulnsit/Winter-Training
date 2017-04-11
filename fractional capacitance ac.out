@@ -1,0 +1,75 @@
+
+**** 03/24/17 01:09:28 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Fractional Capacitance Simulation - Winter Training
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+.lib eval.lib
+Ra 1 2 111.1
+Rb 2 3 251.7
+Rc 3 4 378.7
+Rd 4 5 888.9
+Re 5 0 7.369k
+Cb 2 3 83.8nF
+Cc 3 4 0.296uF
+Cd 4 5 0.537uF
+Ce 5 0 0.695uF
+Vin 1 0 ac 1V
+.ac dec 50 1Hz 1MegHz
+.probe
+.end
+
+**** 03/24/17 01:09:28 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Fractional Capacitance Simulation - Winter Training
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    0.0000  (    2)    0.0000  (    3)    0.0000  (    4)    0.0000      
+
+(    5)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    Vin          0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/24/17 01:09:28 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Fractional Capacitance Simulation - Winter Training
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

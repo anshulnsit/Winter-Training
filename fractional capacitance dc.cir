@@ -1,0 +1,8 @@
+** Fractional Capacitance Simulation - Winter Training
+.lib eval.lib
+R1 2 1 1k
+C1 2 0 1uF
+Vin 1 0 dc 1V
+.dc Vin -10V 10V 0.01V
+.probe
+.end

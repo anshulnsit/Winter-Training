@@ -1,0 +1,175 @@
+
+**** 03/24/17 12:35:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Fractional Order Sallen Key LPF - Winter Training (30/EC/14)
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+.lib eval.lib
+
+** Fractional Capacitance Simulation - Order = 1.5 C(Beta)
+Rax 3 200 111.1
+Rbx 200 300 251.7
+Rcx 300 400 378.7
+Rdx 400 500 888.9
+Rex 500 0 7.369k
+Cbx 200 300 83.8nF
+Ccx 300 400 0.296uF
+Cdx 400 500 0.537uF
+Cex 500 0 0.695uF
+
+** Fractional Capacitance Simulation - Order = 1.1 C(Alpha)
+Ray 2 20 658.7
+Rby 20 30 196.3
+Rcy 30 40 134.6
+Rdy 40 50 159.0
+Rey 50 6 369.5
+Cby 20 30 68.9nF
+Ccy 30 40 0.627uF
+Cdy 40 50 2.18uF
+Cey 50 6 6.64uF
+
+** Sallen Key Ckt
+R1 1 2 1k
+R2 2 3 2k
+R3 4 0 3k
+R4 4 6 4k
+X1 3 4 71 41 6 UA741
+Vcc+ 71 0 dc 12V
+Vcc- 41 0 dc -12V
+Vin 1 0 ac 1V
+
+.ac dec 50 1Hz 1MegHz
+.probe
+.end
+
+**** 03/24/17 12:35:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Fractional Order Sallen Key LPF - Winter Training (30/EC/14)
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X1.dx           
+          IS  800.000000E-18 
+          RS    1            
+
+
+**** 03/24/17 12:35:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Fractional Order Sallen Key LPF - Winter Training (30/EC/14)
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X1.qx           
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/24/17 12:35:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Fractional Order Sallen Key LPF - Winter Training (30/EC/14)
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    0.0000  (    2)-52.79E-06  (    3)-173.7E-06  (    4)-154.4E-06      
+
+(    6)-41.20E-06  (   20)-47.76E-06  (   30)-46.26E-06  (   40)-45.23E-06      
+
+(   41)  -12.0000  (   50)-44.02E-06  (   71)   12.0000  (  200)-171.5E-06      
+
+(  300)-166.7E-06  (  400)-159.3E-06  (  500)-142.2E-06  ( X1.6) 3.099E-09      
+
+( X1.7)-39.40E-06  ( X1.8)-39.40E-06  ( X1.9)    0.0000  (X1.10)    -.6078      
+
+(X1.11)   11.9600  (X1.12)   11.9600  (X1.13)    -.5940  (X1.14)    -.5940      
+
+(X1.53)   11.0000  (X1.54)  -11.0000  (X1.90) 35.94E-06  (X1.91)   40.0000      
+
+(X1.92)  -40.0000  (X1.99)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    Vcc+        -1.337E-03
+    Vcc-         1.337E-03
+    Vin         -5.279E-08
+    X1.vb        3.099E-14
+    X1.vc        1.100E-11
+    X1.ve        1.100E-11
+    X1.vlim      3.594E-08
+    X1.vlp      -4.000E-11
+    X1.vln      -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/24/17 12:35:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Fractional Order Sallen Key LPF - Winter Training (30/EC/14)
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+
